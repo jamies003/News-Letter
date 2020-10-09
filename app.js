@@ -32,11 +32,11 @@ app.post("/", function (req, res){
     };
 
     const jsonData = JSON.stringify(data);
-    const url = "https://us10.api.mailchimp.com/3.0/lists/ad0fe8d177";
+    const url = "https://us10.api.mailchimp.com/3.0/lists/";
 
     const options = {
         method: "POST",
-        auth: "jamie:5cdb944d77b0c4e403c3a6f1dfce20b12-us10"
+        auth: "us10"
 
     }
 
@@ -57,10 +57,7 @@ app.post("/", function (req, res){
     request.write(jsonData);
     request.end();
 });
-// 'https://<dc>.api.mailchimp.com/3.0/'
-// 'https://usX.api.mailchimp.com/3.0/lists'\
-// List ID ad0fe8d177
-// apiKey 5cdb944d77b0c4e403c3a6f1dfce20b1-us10
+
 app.post("/failure", function(req, res){
     res.redirect("/");
 })
